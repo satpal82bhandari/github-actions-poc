@@ -1,10 +1,10 @@
 name: Python Application
 
 on:
-  # Trigger on code push to the 'secondary' branch
+  # Trigger on code push to any branch
   push:
     branches:
-      - secondary
+      - '*'  # This will trigger on push to any branch
 
   # Trigger on pull request creation or updates against 'master'
   pull_request:
