@@ -1,10 +1,20 @@
 name: Python Application
 
 on:
+  # Trigger on code push to the 'secondary' branch
   push:
     branches:
-      - master
+      - secondary
+
+  # Trigger on pull request creation or updates against 'master'
   pull_request:
+    branches:
+      - master
+
+  # Trigger when a pull request targeting 'master' is approved
+  pull_request_review:
+    types:
+      - approved
     branches:
       - master
 
